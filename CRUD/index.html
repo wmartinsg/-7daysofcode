@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crud</title>
+    <!-- IMPORT CSS E Javascript -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+</head>
+<body>
+    <h1>Desafio CRUD</h1>
+    <div class="background hide"></div>
+    <div class="modal hide">
+        <h2>Edite</h2>
+        <form class="form-modal">
+            <label>Nome:</label>
+
+            <input class="modal-field-name" minlength="3" maxlength="120" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]+$" name="name" type="text" placeholder="Ex:Gabriel">
+    
+            <p class="message-error hide">Campo Obrigatório!</p>
+    
+            <label>Data de Nascimento: </label>
+    
+            <input class="modal-field-birth" name="birth-date" type="date">
+    
+            <p class="message-error hide">Campo Obrigatório!</p>
+            <div class="modal-btns">
+                <button class="modal-btn-save" type="submit">Salvar</button>
+                <button class="modal-btn-cancel" onclick="closeModal()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <main class="container">
+        <div class="menu">
+
+            <form class="form">
+                <label for="name">Nome:</label>
+
+                <input class="form-field" id="name" minleng th="3" maxlength="120" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]+$" name="name" required type="text">
+
+                <label for="birth-date">Nascimento:</label>
+
+                <input class="form-field" id="birth-date" name="birth-date" required type="date">
+
+                <button type="submit" class="btn-submit" title="Enviar">
+                    <span class="material-symbols-outlined">
+                    add
+                    </span>
+                </button>
+            </form>
+        </div>
+
+        <div class="result">
+            <div class="titles hide">
+                <h2 class="title-name">Nomes</h2>
+                <h2 class="title-birth">Data de Nascimento</h2>
+                <h2 class="title-actions">Ações</h2>
+            </div>
+            
+            <ul class="ul-result hide">
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
